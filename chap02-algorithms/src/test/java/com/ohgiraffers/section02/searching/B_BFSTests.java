@@ -72,6 +72,7 @@ class B_BFSTests {
     @MethodSource("provideSource")
     public void bfsTest(String input, Integer output) throws IOException {
         Integer result = B_BFS.solution(input);
+//        Integer result = B_BFS_2.solution(input);
         Assertions.assertEquals(output, result);
     }
 }
