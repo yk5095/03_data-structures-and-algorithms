@@ -20,7 +20,16 @@ class F_FindTreeParentTests {
 
     @BeforeAll
     public static void set() {
-
+        /*
+            (1)
+           /   \
+          /     \
+        (6)     (4)
+         |     /  \
+        (3)   (2) (7)
+         |
+        (5)
+        * */
         input1 = "7\n" +
                 "1 6\n" +
                 "6 3\n" +
@@ -59,7 +68,7 @@ class F_FindTreeParentTests {
     @ParameterizedTest
     @MethodSource("provideSource")
     public void treeTest(String input, String output) throws Exception {
-        //String result = F_FindTreeParent.solution(input);
+        String result = F_FindTreeParent.solution(input);
         Assertions.assertEquals(output, result);
     }
 }
